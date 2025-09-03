@@ -201,3 +201,7 @@ obj/
 # *.mov
 # *.wmv
 # *.flv
+
+# Project documentation files (internal development)
+PROJECT_OVERVIEW.md
+TODO.md
