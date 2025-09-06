@@ -20,7 +20,10 @@ This repository contains the **early development version** of Freedom Fighter, w
 - ✅ Enemy character variants (unarmed and armed with baseball bat)
 - ✅ Character art import (.psb files) and integration
 - ✅ Character rigging and bone setup for all characters
-- ✅ Main character walking animation
+- ✅ Character animations for all characters:
+  - FreedomFighter (Playable): Walking, Punching, Kicking
+  - Settler1 (Enemy): Walking, Bat_swing (Attack)
+  - Settler2 (Enemy): Walking, Punching (Attack)
 - 🚧 Combat system (in development)
 - 🚧 Enemy AI and behavior (in development)
 - 🚧 Level design and environment (in development)
@@ -119,7 +122,7 @@ This repository contains the **early development version** of Freedom Fighter, w
 
 ### 🚧 Current Development Status
 
-**Note**: The game is currently in early development. The main character and enemies are created and rigged, with basic walking animation implemented. Combat systems, AI, and gameplay mechanics are still being developed.
+**Note**: The game is currently in early development. The main character and enemies are created and rigged, with complete animation sets implemented for all characters. Combat systems, AI, and gameplay mechanics are still being developed.
 
 ## 🎯 Development Roadmap
 
@@ -130,13 +133,16 @@ This repository contains the **early development version** of Freedom Fighter, w
 - [x] Enemy character variants (unarmed and armed with baseball bat)
 - [x] Character art import (.psb files) and integration
 - [x] Character rigging and bone setup for all characters
-- [x] Main character walking animation
+- [x] Character animations for all characters:
+  - [x] FreedomFighter (Playable): Walking, Punching, Kicking
+  - [x] Settler1 (Enemy): Walking, Bat_swing (Attack)
+  - [x] Settler2 (Enemy): Walking, Punching (Attack)
 
 ### 🚧 In Progress
 
 - [ ] Combat system implementation (punch/kick mechanics)
 - [ ] Enemy AI and behavior systems
-- [ ] Additional character animations (punch, kick, hit, die)
+- [ ] Additional character animations (idle, die)
 - [ ] Level design and environment creation
 - [ ] UI and menu systems
 - [ ] Audio system implementation
