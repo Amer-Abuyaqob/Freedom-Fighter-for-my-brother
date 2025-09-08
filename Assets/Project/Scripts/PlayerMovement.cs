@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
     [SerializeField] SpriteRenderer sp;
     [SerializeField] Animator animator;
+    [SerializeField] PlayerCombat combat;
     [SerializeField] float speed = 1.35f;
     [SerializeField] float jumpPower = 5f;
     [SerializeField] string groundTag = "Ground";
@@ -20,11 +21,21 @@ public class PlayerMovement : MonoBehaviour
         if (rb == null) rb = GetComponent<Rigidbody2D>();
         if (sp == null) sp = GetComponent<SpriteRenderer>();
         if (animator == null) animator = GetComponent<Animator>();
+        if (combat == null) combat = GetComponent<PlayerCombat>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        // If attacking, lock input
+        if (combat != null && combat.IsAttacking)
+        {
+            horizontalInput = 0f;
+            jumpRequested = false;
+            if (animator != null) animator.SetBool("isWalking", false);
+            return;
+        }
+
         // Read horizontal input (-1, 0, 1)
         horizontalInput = 0f;
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) horizontalInput -= 1f;
@@ -41,6 +52,16 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        // If attacking, stop horizontal movement
+        if (combat != null && combat.IsAttacking)
+        {
+            if (rb != null)
+            {
+                rb.velocity = new Vector2(0f, rb.velocity.y);
+            }
+            return;
+        }
+
         // Horizontal movement handled via velocity in physics step
         if (rb != null)
         {
