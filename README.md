@@ -24,9 +24,10 @@ This repository contains the **early development version** of Freedom Fighter, w
   - FreedomFighter (Playable): Walking, Punching, Kicking
   - Settler1 (Enemy): Walking, Bat_swing (Attack)
   - Settler2 (Enemy): Walking, Punching (Attack)
+- ✅ Level 1 environment setup (background, platforms, and level structure)
 - 🚧 Combat system (in development)
 - 🚧 Enemy AI and behavior (in development)
-- 🚧 Level design and environment (in development)
+- 🚧 Collectable health items and enemy placement (next priority)
 - 🚧 UI and menu systems (in development)
 - 🚧 Audio system (in development)
 
@@ -122,7 +123,7 @@ This repository contains the **early development version** of Freedom Fighter, w
 
 ### 🚧 Current Development Status
 
-**Note**: The game is currently in early development. The main character and enemies are created and rigged, with complete animation sets implemented for all characters. Combat systems, AI, and gameplay mechanics are still being developed.
+**Note**: The game is currently in early development. The main character and enemies are created and rigged, with complete animation sets implemented for all characters. Level 1 environment is now complete with backgrounds, main platform, and level structure. The next priorities are adding collectable health items and pre-spawned enemies to the level, followed by combat systems, AI, and gameplay mechanics.
 
 ## 🎯 Development Roadmap
 
@@ -137,13 +138,15 @@ This repository contains the **early development version** of Freedom Fighter, w
   - [x] FreedomFighter (Playable): Walking, Punching, Kicking
   - [x] Settler1 (Enemy): Walking, Bat_swing (Attack)
   - [x] Settler2 (Enemy): Walking, Punching (Attack)
+- [x] Level 1 environment setup (tilemap, platforms, parallax backgrounds, level bounds)
 
 ### 🚧 In Progress
 
 - [ ] Combat system implementation (punch/kick mechanics)
 - [ ] Enemy AI and behavior systems
 - [ ] Additional character animations (idle, die)
-- [ ] Level design and environment creation
+- [ ] Collectable health items placement in Level 1
+- [ ] Pre-spawned enemy placement in Level 1
 - [ ] UI and menu systems
 - [ ] Audio system implementation
 - [ ] Cutscene system with Timeline
