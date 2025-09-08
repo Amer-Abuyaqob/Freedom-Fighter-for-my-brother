@@ -69,12 +69,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Sprite facing
-        // FIXME: Use scale.x * -1 method instead (so all of the children of the gameObject gets mirrored)
-        if (sp != null)
-        {
-            if (horizontalInput > 0.01f) sp.flipX = false;
-            else if (horizontalInput < -0.01f) sp.flipX = true;
-        }
+         ApplyFacing(horizontalInput);
 
         // Jump
         if (jumpRequested && canJump && rb != null)
@@ -84,6 +79,14 @@ public class PlayerMovement : MonoBehaviour
 
         // Clear one-shot input
         jumpRequested = false;
+
+    void ApplyFacing(float dir)
+    {
+        // FIXME: Mgiht need to swap the signs
+        if (dir > 0.01f) transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        else if (dir < -0.01f) transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * -1, transform.localScale.y, transform.localScale.z);
+    }
+
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
