@@ -1,3 +1,70 @@
+# --- Unity project ---
+# Keep: Assets/, ProjectSettings/, Packages/ (and all .meta files)
+# Ignore: Unity-generated caches/builds and IDE artifacts
+
+# Unity generated folders
+Library/
+Temp/
+Obj/
+Logs/
+UserSettings/
+MemoryCaptures/
+Records/
+Logs/
+
+# Common build output
+Build/
+Builds/
+
+# Addressables (generated build content)
+Assets/AddressableAssetsData/*/*.bin*
+Assets/StreamingAssets/aa/
+
+# Burst
+.burst/
+
+# Crash reports
+sysinfo.txt
+
+# IDE / Editor
+.vs/
+.idea/
+.vscode/
+*.sln
+*.csproj
+*.csproj.user
+*.user
+*.suo
+*.tmp
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.VC.VC.opendb
+*.sln.DotSettings.user
+
+# OS / tooling
+.DS_Store
+Thumbs.db
+
+# Rider / JetBrains
+.Rider*/
+
+# Unity Collab/Plastic
+/.Plastic/
+Library/PlasticSCM/
+
+# Shader cache (if outside Library)
+*.shadercache
+
+# Do NOT ignore meta files or the following directories:
+#! Assets/
+#! ProjectSettings/
+#! Packages/
+
 # Unity generated files
 [Ll]ibrary/
 [Tt]emp/
