@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 586255203}
   m_Layer: 0
   m_Name: Lower Bound
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -532,7 +532,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &1875053749
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -568,6 +568,24 @@ CapsuleCollider2D:
   m_Offset: {x: -0.10778529, y: 7.8589616}
   m_Size: {x: 3.2378948, y: 13.866672}
   m_Direction: 0
+--- !u!114 &1875053753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875053744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf7287321310b140b14cd01900542c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  sp: {fileID: 0}
+  animator: {fileID: 0}
+  speed: 3
+  jumpPower: 5
+  groundTag: Ground
 --- !u!1001 &1995768604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -726,6 +744,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5615817446405001080, guid: 8b8bb5ad419c9094482bdd6bc9d66e6f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1875053749}
+    - targetCorrespondingSourceObject: {fileID: 5615817446405001080, guid: 8b8bb5ad419c9094482bdd6bc9d66e6f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1875053753}
   m_SourcePrefab: {fileID: 100100000, guid: 8b8bb5ad419c9094482bdd6bc9d66e6f, type: 3}
 --- !u!1 &2120083694
 GameObject:
