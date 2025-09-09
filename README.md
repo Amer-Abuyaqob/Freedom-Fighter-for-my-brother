@@ -25,10 +25,10 @@ This repository contains the **early development version** of Freedom Fighter, w
   - Settler1 (Enemy): Walking, Bat_swing (Attack)
   - Settler2 (Enemy): Walking, Punching (Attack)
 - ✅ Level 1 environment setup (background, platforms, and level structure)
-- 🚧 Combat system (in development)
-- 🚧 Enemy AI and behavior (in development)
+- ✅ Combat system (basic melee implemented: punch/kick with timed damage)
+- ✅ Enemy AI and behavior (patrol/chase/attack for Settler1 bat and Settler2 punch)
 - 🚧 Collectable health items and enemy placement (next priority)
-- 🚧 UI and menu systems (in development)
+- ✅ UI (HUD basics: player health text, enemy counter Killed: X/Total)
 - 🚧 Audio system (in development)
 
 ## 🎮 Game Features
@@ -36,9 +36,9 @@ This repository contains the **early development version** of Freedom Fighter, w
 ### ⚔️ Combat System
 
 - **Melee Combat**: Punch and kick attacks with different damage and range
-- **Enemy AI**: Settlers that chase and attack the player with varying difficulty
-- **Health System**: Player and enemy health with visual feedback
-- **Damage System**: Different attack types with varying damage values
+- **Enemy Melee**: Settler1 (bat) and Settler2 (punch) use timed hitboxes via animation events
+- **Health System**: Player and enemy health; player implements `IDamageable`
+- **Damage System**: Enemy hitboxes damage the player on contact windows
 
 ### 🎨 Visual Design
 
@@ -79,6 +79,7 @@ This repository contains the **early development version** of Freedom Fighter, w
 
 - **2D Animation**: Unity's 2D Animation system with bone rigging ✅
 - **PSB Workflow**: Photoshop Big files for character animation ✅
+- **TextMeshPro**: 3D world-space enemy health text; HUD text ✅
 - **Timeline**: For cutscene creation and management (planned)
 - **ScriptableObjects**: For enemy stats and game configuration (planned)
 
