@@ -409,6 +409,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5155758696417762124}
   - component: {fileID: 3565767749985756133}
+  - component: {fileID: 1811173373326140852}
   m_Layer: 8
   m_Name: HealthText
   m_TagString: Untagged
@@ -449,6 +450,19 @@ MonoBehaviour:
   showMaxHealth: 1
   format: '{0}/{1}'
   hideWhenFull: 0
+--- !u!114 &1811173373326140852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4002231494321631577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2d0366d2746cdc4195af52e3160a518, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keepUpright: 1
 --- !u!1 &4250328039861889683
 GameObject:
   m_ObjectHideFlags: 0
