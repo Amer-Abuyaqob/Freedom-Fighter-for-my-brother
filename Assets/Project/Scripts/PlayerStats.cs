@@ -3,32 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class PlayerStats : MonoBehaviour
+public class PlayerStats : MonoBehaviour, IDamageable
 {
     public int health = 100;
     public int maxHealth = 100;
-    public TextMeshProUGUI healthText;
+
+    void Awake()
+    {
+        health = Mathf.Clamp(health, 0, maxHealth);
+    }
 
     // TODO: when health reaches zero player loses (GAME OVER)
-    // FIXME: health shouldn't exceed maxHealth
     public void AddHealth(int amount)
     {
-        health += amount;
-        UpdateUI();
+        if (amount <= 0) return;
+        health = Mathf.Clamp(health + amount, 0, maxHealth);
     }
 
-    //TODO: Add damaging Itmes
     public void TakeDamage(int amount)
     {
-        health -= amount;
-        UpdateUI();
-    }
+        if (amount <= 0) return;
+        health = Mathf.Max(0, health - amount);
 
-    private void UpdateUI()
-    {
-        if (healthText != null)
+        if (health == 0)
         {
-            healthText.text = "Health: " + health;
+            // TODO: Trigger game over / respawn
         }
     }
 }

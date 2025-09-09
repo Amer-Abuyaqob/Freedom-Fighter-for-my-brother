@@ -496,11 +496,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: a5b8de2c8d3f5d84f95794e76382571a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -27.759998
+      value: -27.23
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: a5b8de2c8d3f5d84f95794e76382571a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.462
+      value: -7.63
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: a5b8de2c8d3f5d84f95794e76382571a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -850,6 +850,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: a5b8de2c8d3f5d84f95794e76382571a, type: 3}
       insertIndex: -1
       addedObject: {fileID: -5709328394124929371}
+    - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: a5b8de2c8d3f5d84f95794e76382571a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4073438599426441628}
   m_SourcePrefab: {fileID: 4843985084834002234, guid: a5b8de2c8d3f5d84f95794e76382571a, type: 3}
 --- !u!4 &467077440729487914 stripped
 Transform:
@@ -1046,6 +1049,20 @@ MonoBehaviour:
   punchStateName: punching
   kickStateName: kicking
   contactDelay: 0.1
+--- !u!114 &-4073438599426441628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5615817446405001080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b37e2048aff52f54386d01de790df7ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  maxHealth: 100
 --- !u!4 &5821194661243675620 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7295371410893730527, guid: a5b8de2c8d3f5d84f95794e76382571a, type: 3}
