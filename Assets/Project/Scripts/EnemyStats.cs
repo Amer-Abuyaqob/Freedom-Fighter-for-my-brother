@@ -4,7 +4,6 @@ public class EnemyStats : MonoBehaviour, IDamageable
 {
     [Header("Health Settings")]
     [SerializeField] int maxHealth = 50;
-    [SerializeField] bool destroyOnDeath = true;
 
     int currentHealth;
 
