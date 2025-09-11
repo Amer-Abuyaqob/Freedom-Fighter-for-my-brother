@@ -3,15 +3,32 @@
 [![Unity](https://img.shields.io/badge/Unity-2022%20LTS-blue.svg)](https://unity.com/)
 [![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey.svg)](https://www.microsoft.com/en-us/windows)
 [![Genre](https://img.shields.io/badge/Genre-2D%20Beat--em--up-red.svg)](https://en.wikipedia.org/wiki/Beat_%27em_up)
-[![Status](https://img.shields.io/badge/Status-In%20Development-yellow.svg)](https://github.com/yourusername/freedom-fighter)
+[![Status](https://img.shields.io/badge/Status-Released-brightgreen.svg)](https://github.com/yourusername/freedom-fighter)
 
 > A powerful 2D side-scrolling beat-'em-up that tells a story of resistance, family, and justice through classic arcade-style combat and deeply personal narrative.
+
+## 📚 Table of Contents
+
+- [About the Game](#-about-the-game)
+- [Game Features](#-game-features)
+- [Technical Features](#-technical-features)
+- [Getting Started](#-getting-started)
+- [Development Roadmap](#-development-roadmap)
+- [Contributing](#-contributing)
+- [Art Direction](#-art-direction)
+- [Audio Vision](#-audio-vision)
+- [License](#-license)
+- [Acknowledgments](#-acknowledgments)
+- [Contact](#-contact)
+- [Support the Project](#-support-the-project)
+- [Screenshots](#-screenshots)
+- [Trailer](#-trailer)
 
 ## 📖 About the Game
 
 **Freedom Fighter: For My Brother** is a 2D side-scrolling beat-'em-up game that combines classic arcade-style combat mechanics with a deeply personal narrative exploring themes of oppression, loss, and the fight for freedom. The game follows a protagonist whose peaceful life is shattered when settlers attack his village, leading to a tragic loss that transforms his motivation from simple defense to a burning desire for justice.
 
-### 🎯 Current Status: Core Systems Complete
+### 🎯 Current Status: Playable Release
 
 This repository contains the **core systems implementation** of Freedom Fighter, which includes:
 
@@ -27,14 +44,15 @@ This repository contains the **core systems implementation** of Freedom Fighter,
 - ✅ Level 1 environment setup (background, platforms, and level structure)
 - ✅ Combat system (basic melee implemented: punch/kick with timed damage)
 - ✅ Enemy AI and behavior (patrol/chase/attack for Settler1 bat and Settler2 punch)
-- ✅ **NEW**: Complete scene management system (Main Menu → Level1 → GameOver)
+- ✅ **NEW**: Complete scene management system (Main Menu → Intro_Lv1 → Level1 → Outro_Lv1 → TBC)
 - ✅ **NEW**: Camera system with level boundaries and smooth player following
 - ✅ **NEW**: Enemy spawner system with global level capacity and maximum limits
 - ✅ **NEW**: Advanced HUD system showing remaining enemies across all variants
 - ✅ **NEW**: Global level management system coordinating all spawners
-- 🚧 Collectable health items and enemy placement (next priority)
+- ✅ Collectable health items (medkits) with spacing and capacity controls
 - ✅ UI (HUD: player health, kill count, remaining enemies display)
-- 🚧 Audio system (in development)
+- ✅ Audio system: continuous background music + sad music (scene-based)
+- ✅ Victory sequence: "You Won" message + timed transition to Outro
 
 ## 🎮 Game Features
 
@@ -62,7 +80,7 @@ This repository contains the **core systems implementation** of Freedom Fighter,
 ### 🎵 Audio Design
 
 - **Sound Effects**: Punch impacts, enemy reactions, environmental audio
-- **Music**: Atmospheric background music that enhances the emotional tone
+- **Music**: Background music continues across MainMenu → Intro_Lv1 → Level1; sad music in GameOver/Outro
 - **Voice Acting**: Text-based dialogue with emotional weight
 
 ## 🛠️ Technical Features
@@ -116,31 +134,41 @@ This repository contains the **core systems implementation** of Freedom Fighter,
 
 3. **Build and Run**
    - Go to `File > Build Settings`
-   - Select `Windows` platform
-   - Click `Build and Run`
+   - Add scenes in order: `MainMenu`, `Intro_Lv1`, `Level1`, `GameOver`, `Outro_Lv1`, `TBC`
+   - Select your target platform (Windows or WebGL)
+   - Click `Build` (or `Build and Run`)
 
-### 🎮 How to Play (Current Version)
+### 🔧 Where to find Player Settings (Unity)
 
-1. **Main Menu**: Click "START GAME" to begin Level1
-2. **Intro Cutscene**: Watch the story unfold (or skip with Space)
-3. **Level 1**: Fight through waves of settlers with global enemy limits
+- Open: `Edit > Project Settings > Player`
+- Company Name: `Player > Identification > Company Name`
+- Product Name: `Player > Identification > Product Name`
+- Version: `Player > Identification > Version`
+- Icon: `Player > Icon`
+- Resolution: `Player > Resolution and Presentation` (Standalone)
+
+### 🎮 How to Play
+
+1. **Main Menu**: Click "START GAME"
+2. **Intro Cutscene** (`Intro_Lv1`): Watch or skip
+3. **Level 1**: Fight through waves of enemies with global capacity/maximum limits
    - **A/D** or **Arrow Keys**: Move left/right
    - **J**: Punch attack
    - **K**: Kick attack
    - **Esc**: Pause menu
-4. **Outro Cutscene**: Experience the emotional conclusion
+4. **Outro Cutscene** (`Outro_Lv1`): Experience the emotional conclusion
    - **Esc**: Pause menu (planned)
    - **HUD Shows**: Health, enemies killed, remaining enemies
-5. **Game Over**: When player dies, shows score and options to play again or return to main menu
+5. **Game Over**: On death, shows score and options (Play Again, Main Menu, Quit)
 6. **Enemy System**:
    - Settlers spawn based on global capacity limits
    - Each variant has maximum spawn limits
    - Spawners stop when global limits reached
    - Remaining enemies counter shows progress
 
-### 🚧 Current Development Status
+### ✅ Release Status
 
-**Note**: The game has completed its core systems implementation. All character animations, combat mechanics, enemy AI, scene management, camera system, and enemy spawning systems are fully functional. The HUD now displays comprehensive enemy tracking with remaining enemies across all variants. The next priorities are adding collectable health items, audio implementation, and polish for the Level 1 demo.
+The playable build is complete. Core gameplay, cutscenes, enemy spawning with global limits, medkits, HUD, music system, and victory flow are implemented and tested. Further updates may add polish and additional content.
 
 ## 🎯 Development Roadmap
 
@@ -163,13 +191,10 @@ This repository contains the **core systems implementation** of Freedom Fighter,
 - [x] **NEW**: Global level management system coordinating all spawners
 - [x] **NEW**: Game over screen with score display and navigation options
 
-### 🚧 In Progress
+### 🚧 In Progress (Post-Release Ideas)
 
-- [ ] Collectable health items placement in Level 1
-- [ ] Pre-spawned enemy placement in Level 1
-- [ ] Audio system implementation
-- [ ] Cutscene system with Timeline
-- [ ] Build configuration for Windows
+- [ ] Additional polish and balancing
+- [ ] Timeline-based cutscenes
 - [ ] Additional character animations (idle, die)
 - [ ] Pause menu implementation
 
