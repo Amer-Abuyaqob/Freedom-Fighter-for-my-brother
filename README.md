@@ -11,9 +11,9 @@
 
 **Freedom Fighter: For My Brother** is a 2D side-scrolling beat-'em-up game that combines classic arcade-style combat mechanics with a deeply personal narrative exploring themes of oppression, loss, and the fight for freedom. The game follows a protagonist whose peaceful life is shattered when settlers attack his village, leading to a tragic loss that transforms his motivation from simple defense to a burning desire for justice.
 
-### 🎯 Current Status: Early Development
+### 🎯 Current Status: Core Systems Complete
 
-This repository contains the **early development version** of Freedom Fighter, which includes:
+This repository contains the **core systems implementation** of Freedom Fighter, which includes:
 
 - ✅ Unity project setup with proper folder structure
 - ✅ Main character creation and setup
@@ -27,8 +27,13 @@ This repository contains the **early development version** of Freedom Fighter, w
 - ✅ Level 1 environment setup (background, platforms, and level structure)
 - ✅ Combat system (basic melee implemented: punch/kick with timed damage)
 - ✅ Enemy AI and behavior (patrol/chase/attack for Settler1 bat and Settler2 punch)
+- ✅ **NEW**: Complete scene management system (Main Menu → Level1 → GameOver)
+- ✅ **NEW**: Camera system with level boundaries and smooth player following
+- ✅ **NEW**: Enemy spawner system with global level capacity and maximum limits
+- ✅ **NEW**: Advanced HUD system showing remaining enemies across all variants
+- ✅ **NEW**: Global level management system coordinating all spawners
 - 🚧 Collectable health items and enemy placement (next priority)
-- ✅ UI (HUD basics: player health text, enemy counter Killed: X/Total)
+- ✅ UI (HUD: player health, kill count, remaining enemies display)
 - 🚧 Audio system (in development)
 
 ## 🎮 Game Features
@@ -72,8 +77,11 @@ This repository contains the **early development version** of Freedom Fighter, w
 
 - **Input System**: Unity's new Input System for modern control handling
 - **Physics**: 2D physics with Rigidbody2D and Collider2D
-- **Camera**: Smooth following camera with level boundaries using Cinemachine
-- **UI System**: Canvas-based UI with health bars and menus
+- **Camera**: Smooth following camera with level boundaries and auto-setup
+- **UI System**: Canvas-based UI with health bars, kill counters, and remaining enemies display
+- **Scene Management**: Complete game flow from Main Menu through Level1 to GameOver
+- **Enemy Spawning**: Global level-wide capacity and maximum limits system
+- **Level Management**: Centralized coordination of all spawners and enemy counts
 
 ### 🎨 Development Tools
 
@@ -111,24 +119,32 @@ This repository contains the **early development version** of Freedom Fighter, w
    - Select `Windows` platform
    - Click `Build and Run`
 
-### 🎮 How to Play (When Complete)
+### 🎮 How to Play (Current Version)
 
-1. **Main Menu**: Click "Start" to begin the game
+1. **Main Menu**: Click "START GAME" to begin Level1
 2. **Intro Cutscene**: Watch the story unfold (or skip with Space)
-3. **Level 1**: Fight through waves of settlers
+3. **Level 1**: Fight through waves of settlers with global enemy limits
    - **A/D** or **Arrow Keys**: Move left/right
    - **J**: Punch attack
    - **K**: Kick attack
    - **Esc**: Pause menu
 4. **Outro Cutscene**: Experience the emotional conclusion
+   - **Esc**: Pause menu (planned)
+   - **HUD Shows**: Health, enemies killed, remaining enemies
+5. **Game Over**: When player dies, shows score and options to play again or return to main menu
+6. **Enemy System**:
+   - Settlers spawn based on global capacity limits
+   - Each variant has maximum spawn limits
+   - Spawners stop when global limits reached
+   - Remaining enemies counter shows progress
 
 ### 🚧 Current Development Status
 
-**Note**: The game is currently in early development. The main character and enemies are created and rigged, with complete animation sets implemented for all characters. Level 1 environment is now complete with backgrounds, main platform, and level structure. The next priorities are adding collectable health items and pre-spawned enemies to the level, followed by combat systems, AI, and gameplay mechanics.
+**Note**: The game has completed its core systems implementation. All character animations, combat mechanics, enemy AI, scene management, camera system, and enemy spawning systems are fully functional. The HUD now displays comprehensive enemy tracking with remaining enemies across all variants. The next priorities are adding collectable health items, audio implementation, and polish for the Level 1 demo.
 
 ## 🎯 Development Roadmap
 
-### ✅ Completed (Early Development)
+### ✅ Completed (Core Systems)
 
 - [x] Unity project setup and folder structure
 - [x] Main character creation and setup
@@ -140,18 +156,22 @@ This repository contains the **early development version** of Freedom Fighter, w
   - [x] Settler1 (Enemy): Walking, Bat_swing (Attack)
   - [x] Settler2 (Enemy): Walking, Punching (Attack)
 - [x] Level 1 environment setup (tilemap, platforms, parallax backgrounds, level bounds)
+- [x] **NEW**: Complete scene management system (Main Menu → Level1 → GameOver)
+- [x] **NEW**: Camera system with level boundaries and smooth player following
+- [x] **NEW**: Enemy spawner system with global level capacity and maximum limits
+- [x] **NEW**: Advanced HUD system showing remaining enemies across all variants
+- [x] **NEW**: Global level management system coordinating all spawners
+- [x] **NEW**: Game over screen with score display and navigation options
 
 ### 🚧 In Progress
 
-- [ ] Combat system implementation (punch/kick mechanics)
-- [ ] Enemy AI and behavior systems
-- [ ] Additional character animations (idle, die)
 - [ ] Collectable health items placement in Level 1
 - [ ] Pre-spawned enemy placement in Level 1
-- [ ] UI and menu systems
 - [ ] Audio system implementation
 - [ ] Cutscene system with Timeline
 - [ ] Build configuration for Windows
+- [ ] Additional character animations (idle, die)
+- [ ] Pause menu implementation
 
 ### 🔮 Future Plans (Post-Level 1)
 

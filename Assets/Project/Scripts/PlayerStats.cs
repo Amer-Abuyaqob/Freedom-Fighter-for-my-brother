@@ -27,7 +27,13 @@ public class PlayerStats : MonoBehaviour, IDamageable
 
         if (health == 0)
         {
-            // TODO: Trigger game over / respawn
+            TriggerGameOver();
         }
+    }
+
+    void TriggerGameOver()
+    {
+        // Load the GameOver scene
+        UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
     }
 }
